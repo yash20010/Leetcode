@@ -53,7 +53,7 @@ let twoSum2 = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     let currNum = nums[i]
     let diff = target - currNum
-    if (typeof obj[diff] === 'number') {
+    if (diff in obj) {
       return [obj[diff], i]
     }
     obj[currNum] = i
